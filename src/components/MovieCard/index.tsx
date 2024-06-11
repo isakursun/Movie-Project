@@ -10,7 +10,7 @@ type CardProps = {
 const Card = ({ movie }: CardProps) => {
   return (
     <div className="max-w-64 cursor-pointer hover:scale-105 transition-transform p-2">
-      <Link to={`/movie/${movie.id}`}>
+      <Link to={`/details/${movie.id}`}>
         <img
           className="max-w-64 rounded-md object-contain"
           src={baseImgUrl + movie.poster_path}
@@ -18,7 +18,7 @@ const Card = ({ movie }: CardProps) => {
       </Link>
 
       <div className="flex items-center justify-between">
-        <Link to={`/movie/${movie.id}`}>
+        <Link to={`/details/${movie.id}`}>
         <h2 className="font-semibold">{movie.original_title}</h2>
         </Link>
         <LikeButton id={movie.id} />

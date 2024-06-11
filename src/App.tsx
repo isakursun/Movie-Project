@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import Home from "./pages/HomePage";
-import Favorites from "./pages/FavoritesPage";
-import Detail from "./pages/DetailPage";
+import HomePage from "./pages/HomePage";
+import FavoritesPage from "./pages/FavoritesPage";
+import DetailPage from "./pages/DetailPage";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -12,9 +12,9 @@ const App = () => {
 
       <div className="min-h-screen bg-white text-black p-5 lg:p-10">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/movie/:id" element={<Detail />} />
-          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/details/:id" element={<DetailPage />} />
+          <Route path="/favoriteMovies" element={<FavoritesPage />} />
         </Routes>
       </div>
       
