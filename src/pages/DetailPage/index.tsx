@@ -42,7 +42,7 @@ const Detail = () => {
             <div>
               <div className="flex justify-center items-center gap-3 mb-5">
                 <h1 className="text-2xl font-bold text-red-600 ">
-                  {data.title}
+                  {data.title} ({data.release_date})
                 </h1>
                 <span className="text-2xl font-semibold bg-white text-red-600 shadow-md p-2 border border-red-600 rounded-full cursor-pointer hover:bg-red-600 hover:text-white">{data.vote_average.toFixed(1)}</span>
               </div>
