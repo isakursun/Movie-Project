@@ -4,6 +4,8 @@ import Error from "../Error";
 import Loader from "../Loader";
 import { movieType } from "../../types";
 import Title from "../Title";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 
 type PropsType = {
   endpoint: string;
@@ -23,12 +25,16 @@ const MovieList = ({ endpoint, title }: PropsType) => {
         <Error data={error} />
       ) : (
         data && (
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-            {data.results.map((movie: movieType, key: number) => (
-              <div className="col">
-                <Card movie={movie} key={key} />
-              </div>
-            ))}
+          <div>
+            <Splide
+              options={{ gap: "15px", autoWidth: true, pagination:false}}
+            >
+              {data.results.map((movie: movieType, key: number) => (
+                <SplideSlide>
+                  <Card movie={movie} key={key} />
+                </SplideSlide>
+              ))}
+            </Splide>
           </div>
         )
       )}

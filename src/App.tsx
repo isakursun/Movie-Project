@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Home from "./pages/HomePage";
 import Favorites from "./pages/FavoritesPage";
 import Detail from "./pages/DetailPage";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -16,6 +17,8 @@ const App = () => {
           <Route path="/favorites" element={<Favorites />} />
         </Routes>
       </div>
+      
+      <Footer />
     </BrowserRouter>
   );
 };
