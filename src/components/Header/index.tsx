@@ -8,7 +8,7 @@ const Header = () => {
         MOVIES
       </Link>
 
-      <Link className="flex items-center gap-3 font-semibold text-3xl hover:scale-110 transition-transform " to="/favoritesMovies">
+      <Link className="flex items-center gap-3 font-semibold text-3xl hover:scale-110 transition-transform " to="/favoriteMovies">
         <FaHeart />
       </Link>
     </header>
